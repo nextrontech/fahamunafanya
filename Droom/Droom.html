@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion Room | Fahamu na Fanya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Discussion Platform</h1>
+
+    <!-- User Role Input -->
+    <input type="text" id="username" placeholder="Enter your name" required /><br><br>
+    <div id="roleStatus"></div>
+
+    <!-- Chairperson Panel (Only visible to chairperson) -->
+    <div id="chairpersonPanel" style="display: none;">
+      <h2>Chairperson's Panel</h2>
+      <form id="topicForm">
+        <input type="text" id="topicTitle" placeholder="Enter topic title" required /><br><br>
+        <textarea id="topicDescription" placeholder="Describe the topic..." required></textarea><br><br>
+        <button type="submit">Create Topic</button>
+      </form>
+    </div>
+
+    <!-- Comment Submission Form (Visible to all) -->
+    <h2>Submit Your Comment</h2>
+    <form id="commentForm">
+      <textarea id="commentContent" placeholder="Write your comment..." required></textarea><br><br>
+      <button type="submit">Submit Comment</button>
+    </form>
+
+    <div id="commentStatus"></div>
+
+    <!-- Display of Topics and Comments -->
+    <h2>Current Discussions</h2>
+    <div id="discussionsList"></div>
+
+    <h2>Comments</h2>
+    <div id="commentsList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
